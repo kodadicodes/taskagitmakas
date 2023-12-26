@@ -1,0 +1,44 @@
+
+/* CSS dosyası sıfırlama ve genel ayarlar */
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+*{
+    margin: 0; /* Tüm HTML elemanlarının dış boşluğunu 0 yapar */
+    padding: 0; /* Tüm HTML elemanlarının iç boşluğunu 0 yapar */
+    box-sizing: border-box; /* Tüm HTML elemanlarının genişliğini padding ve border dahil olacak şekilde ayarlar */
+}
+html{
+    font-size: 62.5%; /* HTML elemanının font boyutunu %62.5 yapar, bu genellikle rem birimini kullanırken kullanılır */
+}
+body{
+    display: flex; /* body elemanını flex container yapar */
+    flex-direction: column; /* flex container'ın elemanlarını dikey olarak sıralar */
+    justify-content: center; /* flex container'ın elemanlarını merkeze hizalar */
+    align-items: center; /* flex container'ın elemanlarını yatay eksende merkeze hizalar */
+    height: 100vh; /* body elemanının yüksekliğini viewport yüksekliğinin %100'ü yapar */
+}
+#container{
+    display: flex; /* #container elemanını flex container yapar */
+    flex-direction: row; /* flex container'ın elemanlarını yatay olarak sıralar */
+    flex-wrap: wrap; /* flex container'ın elemanlarını sığmayanları yeni satıra taşır */
+    justify-content: space-between; /* flex container'ın elemanları arasında eşit boşluk bırakır */
+    align-items: center; /* flex container'ın elemanlarını yatay eksende merkeze hizalar */
+    width: 80%; /* #container elemanının genişliğini %80 yapar */
+    height: auto; /* #container elemanının yüksekliğini içerdiği elemanlara göre otomatik ayarlar */
+    border: thin solid black; /* #container elemanına ince, katı ve siyah bir çerçeve ekler */
+    border-radius: 2rem 0 2rem 0; /* #container elemanının çerçeve yuvarlaklığını ayarlar */
+    padding: 1rem; /* #container elemanının iç boşluğunu 1rem yapar */
+}
+.baslik{
+    color: gray; /* .baslik sınıfına sahip elemanların yazı rengini gri yapar */
+    font-size: 2rem; /* .baslik sınıfına sahip elemanların yazı boyutunu 2rem yapar */
+    text-align: center; /* .baslik sınıfına sahip elemanların yazılarını merkeze hizalar */
+    font-family: 'Yatra One';
+    margin: 1rem;
+}
+#container >img { /* #container id'sine sahip bir elementin doğrudan img çocuklarına stil uygular */
+    flex: 1 1 10rem; /* flex-grow, flex-shrink ve flex-basis özelliklerini tek bir özellikte birleştirir. Bu durumda, öğenin esneklik faktörü 1, esneklik küçültme faktörü 1 ve başlangıç boyutu 10rem'dir */
+    max-width: 30%; /* img öğesinin maksimum genişliğini belirler. Bu durumda, img öğesinin genişliği asla ebeveyninin genişliğinin %30'undan fazla olmayacaktır */
+}
+button{
+    margin: 1rem;
+}
